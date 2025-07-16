@@ -1,43 +1,185 @@
-#intro{
-    position: static;
+:root{
+    --bg-color: #f7f7f7;
+    --sec-bg-color: #efeff1;
+    --main-color: #3646db;
+    --hover-color: rgb(18, 18, 78)
+}
+
+*{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+body{
+    color: var(--main-color);
+    background: var(--bg-color);    
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+    line-height: 0.5;
+    margin-bottom: 40px;
+}
+
+.header a{
+    text-decoration: none;
+    color: var(--main-color)
+}
+
+.header h1{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+hr{
+    border-top: 2px solid var(--main-color);
+    margin: 50px;
+}
+
+.navbar{
+    text-align: left;
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbutton{
+}
+
+.navparent{
+    font-size: 1.5em;
+    color: var(--main-color);
+    background: var(--bg-color);
+    padding: 15px;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background: var(--bg-color);
+}
+
+.dropdown-content :first-child{
+}
+
+.dropdown-content a{
+    display: block;
+    padding: 15px;
+    width: fit-content;
+    font-weight: 600;
+    color: var(--main-color)
+}
+
+.dropdown-content a:hover{
+    background: var(--sec-bg-color);
+    color: var(--hover-color);
+}
+
+.navbutton:hover .dropdown-content{
+    display: block;
+}
+
+.navbutton:hover .navparent{
+    background: var(--sec-bg-color);
+    color: var(--hover-color)
+}
+
+.content{}
+
+.projects{
+    text-align: center;
+    margin-top: 75px;
+}
+
+ul{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    padding: 0;
+}
+
+.projects li{
+    max-width: 25vw;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.projects li a, p{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.4em;
+    font-weight: 400;
+    padding: 10px 0 0 0;
+    position: static;
+    margin-bottom: 5px;
+}
+
+li img{
+    width: 25vw;;
+    border-radius: 10px;
+}
+
+.content{
+    margin:50px;
+
+}
+
+.project p{
+    font-size: 20px;
+}
+
+.project ul{
+    display: block;
+    text-align: left;
+}
+
+.project li{
+    list-style-type: disc;
+    margin: 0px;
+}
+
+.project li p{
+    position: static;
+    top: 0;
+    margin: 10px;
+    background: none;
+}
+
+.video{
     width: 100%;
-    height: 99vh;
-    background-color: red;
+    height: 259px;
+    margin-bottom: 20px;
 }
 
-#me{
-    position: relative;
-    width: 38vh;
-    top: -25%;
-
+.project{
+    text-align:justify;
+    width: 50%;
+    margin: auto;
 }
 
-.tiltable{
-    display: flex;
-    flex-direction: column;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
+.project h1{
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-weight: 800;
 }
 
-#sticker{
-    position: absolute;
-    top: 33%;
-    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.315));
+.project h2{
+    margin: 0;
+    font-weight: 600;
 }
 
-#text{
-    text-align: center;
-    
+.project .description{
+    margin: 30px 0;
+    font-weight: 250;
 }
 
-canvas { 
-	display: block; 
-	position: fixed;
-	z-index: -1;
-	left: 0;
-	top: 0;
+
+.project a{
+    font-size: 1.5em;
 }
